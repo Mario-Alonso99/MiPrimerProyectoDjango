@@ -4,19 +4,16 @@ html_base ="""
 <h1>Mi Web Personal</h1><h2>Portada</h2>
 <ul>
     <li><a href="/">Portada</a></li>
-    <li><a href="/about-me">Acerca de</a></li>
-    <li><a href="/portfolio">Portafolio</a></li>
-    <li><a href="/contact">Contacto</a></li>
+    <li><a href="/about-me/">Acerca de</a></li>
+    <li><a href="/portfolio/">Portafolio</a></li>
+    <li><a href="/contact/">Contacto</a></li>
 </ul>
 """
 
 
 # Create your views here.
 def home(request):
-    return HttpResponse (html_base + """
-            <h2>Portada</h2>
-            <p>Esto es la Portada</p>
-    """)
+    return render(request, "core/home.html")
 
 def about(request):
     return HttpResponse (html_base + """
