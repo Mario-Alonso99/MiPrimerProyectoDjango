@@ -2,8 +2,9 @@
 
 {% block title %}Portada{% endblock %}
 
-{% block content %}
-<h2>Portada</h2>
+{% block background %}{% load static %}{% static 'core/img/home-bg.jpg' %}{% endblock %}
 
-<p>Esto es la Portada</p>
+{% block headers %}
+<h1>Mario Alonso</h1>
+<span class="subheading">Ingeniero En Tecnologias de la Información y Comunicación</span>
 {% endblock %}
